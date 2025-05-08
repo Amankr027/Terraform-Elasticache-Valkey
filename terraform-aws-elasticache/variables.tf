@@ -14,6 +14,12 @@ variable "subnets" {
 }
 
 
+variable "clusters" {
+  description = "Number of  cache clusters (nodes) to create"
+  type        = string
+  default     = "2"
+}
+
 
 variable "node_type" {
   description = "The node type for ElastiCache."
