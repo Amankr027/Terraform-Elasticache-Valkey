@@ -1,3 +1,10 @@
+
+
+variable "engine" {   
+  description = "Specify wheather the engine is memcached or redis"   
+  type        = string 
+}
+
 variable "vpc_id" {
   description = "The VPC ID where the ElastiCache cluster will be deployed."
   type        = string
