@@ -26,7 +26,7 @@ resource "aws_elasticache_replication_group" "valkey_replication" {
   engine                      = "valkey"
   engine_version              = var.engine_version
   node_type                   = var.node_type
-  num_cache_clusters          = 2
+  num_cache_clusters          = var.clusters
   automatic_failover_enabled  = var.automatic_failover_enabled
   multi_az_enabled            = var.multi_az_enabled
   apply_immediately           = var.apply_immediately
