@@ -20,6 +20,7 @@ resource "aws_elasticache_subnet_group" "valkey_subnet_group" {
 }
 
 resource "aws_elasticache_replication_group" "valkey_replication" {
+  count                       = var.engine == "valkey" ? 1 : 0
   replication_group_id        = local.name
   description                 = format("Terraform-managed ElastiCache replication group for %s", local.name)
   engine                      = "valkey"
