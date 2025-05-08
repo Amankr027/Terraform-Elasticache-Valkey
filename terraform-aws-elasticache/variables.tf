@@ -1,5 +1,3 @@
-
-
 variable "engine" {   
   description = "Specify wheather the engine is memcached or redis"   
   type        = string 
