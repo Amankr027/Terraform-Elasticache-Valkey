@@ -20,7 +20,7 @@ provider "aws" {
 }
 
 module "valkey" {
-  source                     = "./modules/terraform-aws-elasticache"
+  source                     = "git::https://github.com/Amankr027/Terraform-ElastiCache.git//terraform-aws-elasticache"
   vpc_id                     = "vpc-044eea22d279ed37f"
   name                       = "aman"
   node_type                  = "cache.t3.medium"
@@ -31,12 +31,7 @@ module "valkey" {
   multi_az_enabled           = true
   apply_immediately          = true
   maintenance_window         = "sun:05:00-sun:09:00"
-  subnets                    = [
-    "subnet-09dbab2078fefb274",
-    "subnet-0c8c4d90092ea352b",
-    "subnet-03ae2dd338783d4e9",
-    "subnet-015e700715be19643"
-  ]
+  subnets                    = ["subnet-xxxxxxxxxx", "subnet-xxxxxxxxxx", "subnet-xxxxxxxxxx", "subnet-xxxxxxxxxx"]
   tags = {
     Environment = "dev"
     Owner       = "Aman"
